@@ -57,7 +57,7 @@ POSSIBILITY OF SUCH DAMAGE.
             <limit effort="${drive_wheel_max_effort}" velocity="${drive_wheel_max_velocity}" />
             <parent link="${parent}" />
             <child link="${prefix}_${suffix}_drive_wheel_link" />
-            <dynamics damping="1.0"/>
+            <dynamics damping="1.0" friction="1.0"/>
         </joint>
 
         <link name="${prefix}_${suffix}_drive_wheel_link">
@@ -219,7 +219,7 @@ POSSIBILITY OF SUCH DAMAGE.
             <limit effort="${roll_joint_max_effort}" velocity="${roll_joint_max_velocity}" />
             <parent link="${prefix}_link" />
             <child link="${prefix}_roll_link" />
-            <dynamics damping="0.7"/>
+            <dynamics damping="1.0" friction="1.0"/>
         </joint>
 
         <link name="${prefix}_roll_link">
